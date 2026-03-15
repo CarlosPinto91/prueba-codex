@@ -10,25 +10,35 @@ export const layoutOptions: { value: SlideLayout; label: string; description: st
 export const starterSlides: Slide[] = [
   {
     id: "slide-1",
-    title: "Bienvenidos a PresentaWeb",
-    content: "Crea presentaciones claras, modernas y listas para compartir.",
-    imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+    title: "Curso Codex en Salud Pública (4h)",
+    content: "Aprende Codex creando un proyecto real de predicción de brotes con datos simulados.",
+    imageUrl: "https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=1000&q=80",
     layout: "image-right",
-    speakerNotes: "Abrir con energía y explicar el objetivo de la herramienta.",
+    speakerNotes: "Presentar objetivo, formato hands-on y entregables.",
   },
   {
     id: "slide-2",
-    title: "Mensaje central",
-    content: "Diseña tu narrativa con un enfoque visual y tipografía elegante.",
-    imageUrl: "https://images.unsplash.com/photo-1487611459768-bd414656ea10?auto=format&fit=crop&w=800&q=80",
+    title: "Módulos prácticos",
+    content:
+      "Setup, simulación de datos, features, modelo baseline, dashboard, skill propia, automatizaciones y GitHub Actions.",
+    imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80",
     layout: "image-left",
-    speakerNotes: "Destacar que se puede editar todo en tiempo real.",
+    speakerNotes: "Explicar que cada módulo tiene ejercicio guiado y reto.",
   },
   {
     id: "slide-3",
-    title: "Siguiente paso",
-    content: "Activa el modo presentador y comparte tu historia.",
+    title: "Proyecto guía",
+    content:
+      "Sistema de alerta temprana por región: predice casos, muestra semáforo epidemiológico y automatiza validaciones en CI.",
+    imageUrl: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1000&q=80",
+    layout: "image-right",
+    speakerNotes: "Resaltar enfoque de punta a punta y trabajo multiagente.",
+  },
+  {
+    id: "slide-4",
+    title: "Atajos y flujo de trabajo",
+    content: "Usa /plan, /edit, /run, /review, /commit y /pr para acelerar ciclos de desarrollo con calidad.",
     layout: "centered",
-    speakerNotes: "Invitar a usar el botón Presentar.",
+    speakerNotes: "Demostrar secuencia recomendada al iniciar y cerrar cada módulo.",
   },
 ];

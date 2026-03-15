@@ -1,0 +1,38 @@
+name: Epi Course CI
+
+on:
+  push:
+    branches: [main, develop, 'feature/**']
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  frontend-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+  docs-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate course files exist
+        run: |
+          test -f course/CURSO-CODEX-SALUD-PUBLICA.md
+          test -f course/templates/prompts/atajos-codex.md
+          test -f course/templates/skills/epi-brote-forecast/SKILL.md
